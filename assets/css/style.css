@@ -25,11 +25,11 @@ header {
    position: -webkit-sticky;
    position: sticky;
    top: 0;    
-   /* background-image: url("../images/hero-bg.jpg"); 
+   background-image: url("../images/hero-bg.jpg"); 
    background-size: cover;
    background-position: center;
    background-attachment: fixed;
-   background-position: 80%;*/
+   background-position: 80%;
    z-index: 9999;
 }
 
@@ -110,3 +110,45 @@ section {
    padding: 60px;
 }
 
+/*  Start Hero Section */
+
+.hero {
+   background-image: url("../images/hero-bg.jpg");
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   align-items: flex-start;
+   background-attachment: fixed;
+   background-position: 80%;
+}
+
+.hero-psa {
+   width: 80%;
+   text-align: right;
+   margin: 3.5%;
+   color: var(--primary-color);
+   font-size: 18px;
+   line-height: 1.2;
+   text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.hero-cta h2 {
+   font-size: 55px;
+   font-size: italic;
+   color: var(--primary-color);
+}
+
+/*  End Hero Section */
+
+
+
+
+/*  Start Utility Styles */
+
+.flex-row {
+   display: flex;
+}
+
+/*  End Utility Styles */
