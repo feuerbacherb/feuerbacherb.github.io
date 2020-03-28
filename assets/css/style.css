@@ -105,11 +105,6 @@ footer p {
 
 /*  End Footer Section */
 
-
-section {
-   padding: 60px;
-}
-
 /*  Start Hero Section */
 
 .hero {
@@ -142,13 +137,92 @@ section {
 
 /*  End Hero Section */
 
+/*  Start Section Basic Info */
 
+section {
+   padding: 60px;
+   background-color: var(--primary-color);
+}
+
+.section-title {
+   font-size: 48px;
+   color: var(--secondary-color);
+   border-bottom: 3px solid;
+   padding-bottom: 20px;
+   text-align: center;
+   margin: 0 auto 35px auto;
+   width: 50%;
+}
+
+/*  End Section Basic Info */
+
+/*  Start About Me Section */
+
+.intro p {
+   line-height: 1.7;
+   color: var(--tertiary-color);
+   width: 80%;
+   font-size: 20px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+.about-me-grid-wrapper {
+   display: flex;
+   width: 100%;
+   justify-content: center;
+}
+
+.about-me-grid-container {
+   width: 80%;
+   display: grid;
+   grid-template-columns: 1fr repeat(2, 4fr);
+   grid-template-rows: repeat(2, 1fr);
+   color: var(--secondary-color);
+   font-size: 1.2rem;
+   grid-gap: 15px;
+}
+
+.about-me-grid-item {
+   padding: 15px 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: left;
+}
+
+
+
+/*  End About Me Section */
 
 
 /*  Start Utility Styles */
 
 .flex-row {
    display: flex;
+}
+
+.grid-head {
+   writing-mode: vertical-lr;
+   grid-column: 1;
+   grid-row: 1 / -1;
+   transform: rotate(180deg);
+   text-align: center;
+   border-left: 3px solid var(--secondary-color);
+   width: 80%;
+}
+
+.grid-item {
+   grid-column: 2 / span 2;
+   width: 90%;
+}
+
+.primary-border {
+   border-color: var(--primary-color);
+}
+
+.secondary-border {
+   border-color: var(--tertiary-color);
 }
 
 /*  End Utility Styles */
