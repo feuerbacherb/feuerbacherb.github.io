@@ -1,92 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Feuerbacher</title>
-   <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width:device-width, initial-scale=1.0" />
+        <title>Feuerbacher</title>
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <!-- navigation-->
+        <header>
+            <h1>
+                <a href="javascript:history.go(0)">Run Buddy</a>
+            </h1>
+            <nav>
+                <!-- Unordered list element -->
+                <ul>
+                    <!-- List item element -->
+                    <li>
+                        <!-- Anchor element -->
+                        <a href="#about-me">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#work">Work</a>
+                    </li>
+                    <li>
+                        <a href="#contact-me">Contact Me</a>
+                    </li>
+                    <li>
+                        <a href="#resume">Resume</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-<body>
-   <!-- navigation -->
-   <header>
-      <h1>
-         <a href="javascript:history.go(0)">Feuerbacher</a> 
-      </h1>
-      <nav>
-            <!-- Unordered list element -->
-            <ul>
-               <li>
-                  <a href="#about-me">About Me</a>
-               </li>
-               <li>
-                  <a href="#work">Work</a>
-               </li>
-               <li>
-                  <a href="#contact-me">Contact Me</a>
-               </li>
-               <li>
-                  <a href="#resume">Resume</a>
-               </li>
-            </ul>
-      </nav>
-   </header>
+        <!-- hero/jumbotron-->
+        <section class="hero">
+            <div class="hero-cta">
+                <h2>Write something meaningful</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae culpa veniam molestias illum dolorem labore quis sed rerum, dolor delectus ipsa dicta doloribus corrupti tempore magni dignissimos temporibus libero velit!
+                </p>
+            </div>
+        </section>
 
-   <!-- hero/jumbotron -->
-   <section class="hero">
-      <div class="hero-psa">
-         <h2>This area for something meaningful,</h2>
-         <p>
-            put something more meaningful
-         </p>
-      </div>
-   </section>
+        <!-- "meet the trainers" section -->
+        <section id="about-me">
+            <div class="flex-row">
+                <h2 class="section-title primary-border">About Me</h2>
+            </div>
 
-   <section id="about-me" class="info">
-      <div class="about-me-grid-wrapper">
-         <div class="about-me-grid-container">
-            <div class="about-me-grid-item grid-head">
-               <h2>About Me</h2>
+            <div class="trainers">
+<!--First Trainer Bio                  
+                <article class="trainer">
+                     
+                    <img src="./assets/images/trainer-1.jpg" alt="Arron Stephens in his workout clothes." />
+                    <div class="trainer-bio">
+                        <h3 class="trainer-name">Arron Stephens</h3>
+                        <h4 class="trainer-role">Speed / Strength</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad obcaecati repudiandae dignissimos deleniti nobis quis ut enim amet tenetur quia similique voluptatem delectus vitae itaque facilis quisquam a, doloribus pariatur!
+                        </p>
+                    </div>
+                </article>
+-->
+                <article class="trainer">
+                    <!-- First Trainer Bio -->
+                    <div class="trainer-img trainer-1">
+                        <div>
+                            <h3>Brent Feuerbacher</h3>
+                            <h4>Aspiring Web Developer</h4>
+                        </div>
+                    </div>
+                    <div class="trainer-bio"> 
+                        <h3>Arron Stephens</h3>
+                        <h4>Speed / Strength</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad obcaecati repudiandae dignissimos deleniti nobis quis ut enim amet tenetur quia similique voluptatem delectus vitae itaque facilis quisquam a, doloribus pariatur!
+                        </p>
+                    </div>
+                </article>  
+
+
             </div>
-            <div class="about-me-grid-img selfie-img">
-               <img src="assets/images/selfie.JPG" alt="Brent Feuerbacher" />
-            </div>
-            <div class="about-me-grid-item grid-item">
-               <p>
-                  My name is Brent Feuerbacher and I live in Briggs, TX, 20 miles from all major cities in central Texas.  When I was 13 years old, I started programming back in Atari 800, modifying the basic games that came with it and experimenting with escape characters for word processing.  I've since graduated to working on Web Forms with mid-tier processing and database back-ends.  Quite a feat from 1983!
-               </p>
-            </div>
-            <div class="about-me-grid-item grid-item">
-               <p>
-                  In 2005, my son was born, and my wife and I had some serious talks about childcare and home-parenting.  By the time my daughter arrived in 2007, I had committed to being a stay-at-home father.  We have since lived in Virginia and South Carolina before coming back to Texas.  I have since worked as a Night Stocker / Sorter for Amazon as well as a Sales Porter for Johnson Sewell in Marble Falls, and was with Johnson Sewell until I decided to take the UT Coding Bootcamp to try and put myself back out in the programming community.
-               </p>
-            </div>
+        </section>
+
+
+        <!-- "work" section -->
+        <section id="work" class="steps">
+         <div class="flex-row">
+             <h2 class="section-title secondary-border">Work</h2>
          </div>
-      </div>
-   </section>
 
-   <section id="work" class="info">
-      <div class="about-me-grid-wrapper">
-         <div class="work-grid-container">
-            <div class="work-grid-item grid-head">
-               <h2>Work</h2>
-            </div>
-            <div class="work-grid-item grid-item">
-               <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis dolor qui expedita corrupti ea delectus aperiam at quis doloribus ab, cum tenetur fuga soluta voluptates! Impedit incidunt sapiente delectus nam.
-               </p>
-            </div>
+         <div class="step">
+             <h3>Run Buddy</h3>
+             <div class="step-info">
+                 <div class="step-img">
+                  <a href="https://feuerbacherb.github.io/run-buddy">   
+                     <img src="./assets/images/run-buddy.jpg" alt="Run Buddy Webpage" />
+                  </a>
+                 </div>
+             </div>
          </div>
-      </div>
-   </section>
 
-   <footer>
-      <h2>Contact Information:</h2>
-      <div>
-         <p>512.964.6668</p>
-         <p>feuerbacherb@gmail.com</p>
-         <a href="feuerbacherb.github.io">GitHub</a>
-      </div>
-   </footer>
-</body>
+      </section>
+
+
+        <!-- footer -->
+        <footer id="contact-me">
+            <h2>Contact Me!</h2>
+            <div>
+                512.555.5555
+            </div>
+            <div>
+               feuerbacherb@gmail.com
+            </div>
+            <div>
+               <a href="https://github.com/feuerbacherb/">GitHub</a>
+            </div>
+        </footer>
+    </body>
 </html>

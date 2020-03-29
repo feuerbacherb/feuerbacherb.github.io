@@ -1,3 +1,4 @@
+  
 * {
    margin: 0;
    padding: 0;
@@ -10,13 +11,13 @@
    --tertiary-color: #6C6D68;
 }
 
-body {
-   color: var(--tertiary-color);
-   font-family: Arial, Helvetica, sans-serif
+body{
+   color:  var(--tertiary-color);
+   font-family: Arial, Helvetica, sans-serif;
 }
 
-/*  Start Header  */
-header {
+/*  apply styles to <header> */
+header{
    padding: 20px 35px;
    background-color: var(--tertiary-color);
    display: flex;
@@ -25,7 +26,7 @@ header {
    position: -webkit-sticky;
    position: sticky;
    top: 0;    
-   background-image: url("../images/hero-bg.jpg"); 
+   background-image: url("../images/hero-bg.jpg");
    background-size: cover;
    background-position: center;
    background-attachment: fixed;
@@ -33,7 +34,7 @@ header {
    z-index: 9999;
 }
 
-header h1{
+header h1 {
    font-weight: bold;
    font-size: 36px;
    color: var(--primary-color);
@@ -41,7 +42,7 @@ header h1{
    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-header a {
+header a{
    text-decoration: none;
    color: var(--primary-color);
 }
@@ -58,6 +59,12 @@ header nav ul {
    list-style: none;
 }
 
+/*  Act like this has been removed per instructions
+header nav ul li {
+   display: inline;
+}
+*/
+
 header nav ul li a {
    padding: 10px 15px;
    font-weight: lighter;
@@ -65,16 +72,13 @@ header nav ul li a {
    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-header nav ul li a:hover {
+header nav ul li a:hover{
    background: var(--primary-color);
    color: var(--secondary-color);
    border-radius: 15px;
    text-shadow: none;
 }
 
-/*  End Header */
-
-/*  Start Footer Section */
 footer {
    background-color: var(--primary-color);
    width: 100%;
@@ -99,14 +103,13 @@ footer a {
    color: var(--secondary-color);
 }
 
-footer p {
-   color: var(--secondary-color);
+section {
+   padding: 60px;
 }
 
-/*  End Footer Section */
 
-/*  Start Hero Section */
-
+/* Hero Style Start */
+/* Homepage Hero */
 .hero {
    background-image: url("../images/hero-bg.jpg");
    background-size: cover;
@@ -118,32 +121,284 @@ footer p {
    background-attachment: fixed;
    background-position: 80%;
 }
+/* remove position and height from .hero
+   height: 600px;
+   position: relative
+*/
 
-.hero-psa {
-   width: 80%;
+/* Hero Style End */
+
+.hero-form {
+   background-color: rgba(252, 225, 56, 0.8);
+   padding: 20px;
+   color: var(--secondary-color);
+   border: solid 3px var(--secondary-color);
+   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+   border-radius: 15px;
+}
+/* .hero-form remove width, position, bottom, and right
+
+   position: absolute;
+   bottom: 120px;
+   right: 140px;
+   width: 500px;
+*/
+
+/*
+   .hero-cta add width, margin, color, font-size, and line-height
+*/
+.hero-cta {
+   width: 35%;
    text-align: right;
    margin: 3.5%;
-   color: var(--primary-color);
+   color: #fff;
    font-size: 18px;
    line-height: 1.2;
    text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .hero-cta h2 {
-   font-size: 55px;
-   font-size: italic;
+   font-size: 55 px;
+   font-style: italic;
    color: var(--primary-color);
 }
 
-/*  End Hero Section */
-
-/*  Start Section Basic Info */
-
-section {
-   padding: 60px;
-   background-color: var(--primary-color);
+.hero-form h3 {
+   font-size: 24px;
+   margin: 0;
 }
 
+/*
+   .hero-form add width and change margin
+   margin: 5px 0 15px 0;
+*/
+.hero-form p {
+   width: 80%;
+   margin: 3.5%;
+}
+
+.form-input {
+   border: 1px solid var(--secondary-color);
+   display: block;
+   padding: 7px 15px;
+   font-size: 16px;
+   color: var(--secondary-color);
+   width: 100%;
+   margin-bottom: 15px;
+   border-radius: 15px;
+   background-color: rgba(255,255,255, 0.75);
+}
+
+.form-input:focus {
+   background-color: rgba(255,255,255, 1);
+   outline: none;
+}
+
+.checkbox-wrapper input, .radio-wrapper input {
+   opacity: 0;
+}
+
+.checkbox-wrapper label, .radio-wrapper label {
+   position: relative;
+   left: 10px;
+   margin: 10px;
+   line-height: 1.6;
+}
+
+.checkbox-wrapper label::before, .radio-wrapper label::before {
+   content: "";
+   height: 20px;
+   width: 20px;
+   background: rgba(255,255,255, 0.75);
+   border: 1px solid var(--secondary-color);
+   position: absolute;
+   top: -4px;
+   left: -30px;
+}
+
+.radio-wrapper label::before {
+   border-radius: 50%;
+}
+
+.radio-wrapper label::after {
+   content: "";
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   background: var(--secondary-color);
+   position: absolute;
+   left: -29px;
+   top: -3px;
+   background-image: radial-gradient(circle, var(--tertiary-color), var(--secondary-color));
+}
+
+.checkbox-wrapper label::after {
+   content: "";
+   height: 6px;
+   width: 14px;
+   border-left: 2px solid var(--secondary-color);
+   border-bottom: 2px solid var(--secondary-color);
+   position: absolute;
+   left: -26px;
+   top: 1px;
+   transform: rotate(-58deg);
+}
+
+.checkbox-wrapper input + label::after, .radio-wrapper input + label::after {
+   content: none;
+}
+
+.checkbox-wrapper input:checked + label::after, .radio-wrapper input:checked + label::after {
+   content: "";
+}
+
+.hero-form label {
+   margin: 0 5px;
+}
+
+.hero-form button {
+   color: var(--primary-color);
+   background-color: var(--secondary-color);
+   border: none;
+   padding: 10px 20px;
+   font-size: 16px;
+   border-radius: 15px;
+}
+
+.hero-form button:hover {
+   background-color: var(--tertiary-color);
+}
+
+/*
+   Remove entire .intro rule
+
+   .intro {
+       text-align: center;
+   }
+*/
+
+/*
+   .intro p add text-align
+*/
+.intro p {
+   line-height: 1.7;
+   color: var(--tertiary-color);
+   width: 80%;
+   font-size: 20px;
+   margin: 0 auto;
+   text-align: center;
+}
+
+/*
+   .steps remove text-align rule
+   
+   text-align: center;
+*/
+.steps {
+   background: var(--primary-color);
+}
+
+/*
+   Remove .steps div, .steps img, and .steps span
+
+   .steps div {
+       margin-bottom: 80px;
+   }
+
+   .steps img {
+       width: 15%;
+       margin: 10px 0;
+   }
+
+   .steps span {
+       font-size: 38px;
+   }
+*/
+
+/*
+   Create new .step rule
+*/
+.step {
+   margin: 50px auto;
+   padding-bottom: 50px;
+   width: 80%;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+   border-bottom: 1px solid var(--tertiary-color);
+}
+
+.step:last-child {
+   border-bottom: none;
+}
+
+/*
+   .steps h3 remove margin-top and rename selector to .step h3
+
+   margin-top: 10px;
+
+   .step h3 add flex: 1 30%;
+*/
+.step a{
+   text-decoration: none;
+}
+
+.step h3 {
+   color: var(--secondary-color);
+   font-size: 46px;
+   flex: 1 30%;
+}
+
+/* Create rule for .step-img */
+.step-img {
+   flex: 1 12%;
+   margin-right: 20px;
+}
+
+.step-img img {
+   max-width: 100%;
+}
+
+/* Create rule for .step-info */
+.step-info {
+   flex: 2 70%;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+}
+
+/*
+   Change .steps p to read .step-text p, and change the font-size from 23px to 18px
+
+   add flex: 12;
+*/
+.step-text p {
+   color: var(--tertiary-color);
+   font-size: 18px;
+   flex: 12;
+}
+
+/*
+   Create new .step-text h4 rule
+*/
+.step-text h4 {
+   font-size: 26px;
+   line-height: 1.5;
+   color: var(--secondary-color);
+}
+
+/*
+   .section-title remove display, padding, and margin-bottom
+   
+   margin-bottom: 35px;
+   padding: 0 100px 20px 100px;
+   display: inline-block;
+
+   .section-title
+
+   add padding-bottom, text-align, margin, and width
+*/
 .section-title {
    font-size: 48px;
    color: var(--secondary-color);
@@ -154,123 +409,6 @@ section {
    width: 50%;
 }
 
-/*  End Section Basic Info */
-
-/*  Start About Me Section */
-
-.intro p {
-   line-height: 1.7;
-   color: var(--tertiary-color);
-   width: 80%;
-   font-size: 20px;
-   margin: 0 auto;
-   text-align: center;
-}
-
-.about-me-grid-wrapper {
-   display: flex;
-   width: 100%;
-   justify-content: center;
-}
-
-.about-me-grid-container {
-   width: 80%;
-   display: grid;
-   grid-template-columns: 1fr repeat(4, 4fr);
-   grid-template-rows: repeat(2, 2fr);
-   color: var(--secondary-color);
-   font-size: 1.2rem;
-   grid-gap: 15px;
-}
-
-.about-me-grid-item {
-   padding: 15px 0;
-   display: flex;
-   align-items: center;
-   justify-content: left;
-   text-align: left;
-}
-
-
-/*
-.about-me-grid-img {
-   display: flex;
-   padding: 15px;
-   width: 100%;
-   min-height: 300px;
-   align-items: flex-end;
-   position: relative;
-   overflow: hidden;
-   grid-column: 2 / span 2;
-   grid-row: 2 / span 2;
-}
-
-.selfie-img {
-   background-image: url("../images/selfie.JPG");
-   background-size: cover;
-   transform: rotate(90deg);
-}
-*/
-
-.about-me-grid-img {
-   grid-column: 2 / 2 span;
-   grid-row: 1 / 2 span;
-   overflow: hidden;
-}
-
-.about-me-grid-img>img {
-   object-fit: cover;
-   width: 100%;
-   max-height: 100%;
-   display: block;
-   transform: rotate(90deg);
-}
-
-/*  End About Me Section */
-
-/*  Start Work Section */
-
-.work-grid-container {
-   width: 80%;
-   display: grid;
-   grid-template-columns: 1fr repeat(2, 4fr);
-   grid-template-rows: repeat(2, 1fr);
-   color: var(--secondary-color);
-   font-size: 1.2rem;
-   grid-gap: 15px;
-}
-
-.work-grid-item {
-   padding: 15px 0;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   text-align: left;
-}
-
-/*  End Work Section */
-
-/*  Start Utility Styles */
-
-.flex-row {
-   display: flex;
-}
-
-.grid-head {
-   writing-mode: vertical-lr;
-   grid-column: 1;
-   grid-row: 1 / -1;
-   transform: rotate(180deg);
-   align-items: baseline;
-   justify-content: center;
-   border-left: 3px solid var(--secondary-color);
-   width: 80%;
-}
-
-.grid-item {
-   grid-column: 4 / span 2;
-}
-
 .primary-border {
    border-color: var(--primary-color);
 }
@@ -279,4 +417,406 @@ section {
    border-color: var(--tertiary-color);
 }
 
-/*  End Utility Styles */
+/* SERVICES STYLES BEGIN */
+.services {
+   background: var(--primary-color);
+}
+
+.service-grid-wrapper {
+   display: flex;
+   width: 100%;
+   justify-content: center;
+}
+
+.service-grid-container {
+   background: lightyellow;
+   width: 80%;
+   display: grid;
+   /* repeat(iterator, size) */
+   grid-template-columns: 1fr repeat(2, 4fr);
+   grid-template-rows: repeat(5, 1fr) 2fr;
+   border: 2px solid var(--secondary-color);
+   color: var(--secondary-color);
+   font-size: 1.2rem;
+}
+
+.service-grid-item {
+   padding: 15px 0;
+   border: 2px solid var(--secondary-color);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+
+.service-grid-item.basic {
+   grid-column: 2 / span 1;
+}
+
+.service-grid-item.both {
+   grid-column: 2 / span 2;
+}
+
+.service-grid-item.cancel {
+   writing-mode: vertical-lr;
+   grid-column: 1;
+   grid-row: 1 / -1;
+   transform: rotate(180deg);
+}
+
+.grid-head, .grid-price, .service-grid-item.cancel {
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+
+/*
+   .trainers remove text-align declaration
+   
+   text-align:center;
+*/
+.trainers {
+   width: 100%;
+   margin: 0 auto;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+}
+
+.trainer {
+   margin: 20px;
+   background: var(--secondary-color);
+   color: var(--primary-color);
+   flex: 1;
+}
+
+.trainer-img {
+   width: 300px;
+   height: 300px;  
+   display: flex;
+   padding: 15px;
+   align-items: center;  
+   position: relative;
+   overflow: hidden;
+}
+
+.trainer-img::after {
+   content: "";
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   opacity: 0;
+   transition: .5s;
+}
+
+.trainer:hover .trainer-img::after {
+
+   background: linear-gradient(rgba(252,255,56, 0.3), var(--secondary-color));
+   opacity: 1;
+   transition: .5s;
+}
+
+
+.trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
+   top: 0px;
+   opacity: 1;
+}
+
+
+.trainer-img h3{
+   position: relative;
+   z-index: 5555;
+   font-size: 28px;
+   margin-bottom: 5px;
+   top: 200px;
+   transition: .6s;
+}
+
+.trainer-img h4 {
+   position: relative;
+   z-index: 5555;
+   font-size: 22px;
+   top: 200px;
+   transition: .6s;
+}
+
+.trainer-1 {
+   background-image: url("../images/selfie4.jpg");
+   background-size: cover;
+}
+
+.trainer-2 {
+   background-image: url("../images/trainer-2.jpg");
+   background-size: cover;
+}
+
+.trainer-3 {
+   background-image: url("../images/trainer-3.jpg");
+   background-size: cover;
+}
+
+.trainer-bio {
+   padding: 25px;
+   line-height: 1.3;
+}
+
+/*
+   .trainer-bio h3 remove margin-bottom, and change font-size to 28px
+   
+   margin-bottom: 8px;
+*/
+.trainer-bio h3{
+   font-size: 28px;
+   display: none;
+}
+
+/*
+   .trainer-bio h4 change font-size from 26ox to 22px, and change margin-bottom from 25px to 15px
+*/
+.trainer-bio h4 {
+   font-weight: lighter;
+   font-size: 22px;
+   margin-bottom: 15px;
+   display: none;
+}
+
+/*
+   .trainer-bio p move line-height from here to .trainer-bio rule
+   
+   line-height: 1.3;
+*/
+.trainer-bio p {
+   font-size: 17px;
+}
+
+/*  REACH OUT STYLES START */
+/*
+   .contact remove text-align rule
+
+   text-align: center;
+*/
+.contact {
+   background: var(--secondary-color);
+}
+
+.contact h2 {
+   color: var(--primary-color);
+}
+
+.contact-form button {
+   width: 100%;
+   border: none;
+   background: var(--primary-color);
+   color: var(--secondary-color);
+   text-align: center;
+   padding: 15px 0;
+   font-size: 16px;
+   border-radius: 15px;
+}
+
+.contact-form button:hover {
+   color: var(--primary-color);
+   background: var(--tertiary-color);
+}
+
+.contact-form input, .contact-form textarea {
+   border: 1px solid var(--secondary-color);
+   display: block;
+   padding: 7px 15px;
+   font-size: 16px;
+   color: var(--secondary-color);
+   width: 100%;
+   margin-bottom: 15px;
+   margin-top: 5px;
+   border-radius: 15px;
+}
+
+.contact-info {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.contact-info > * {
+   flex: 1;
+   margin: 15px;
+}
+
+.contact-info iframe {
+   height: 400px;
+}
+
+.contact-info div {
+   color: white;
+}
+
+.contact-info h3 {
+   color: var(--primary-color);
+   font-size: 32px;
+}
+
+.contact-info p, .contact-info address {
+   margin: 20px 0;
+   line-height: 1.5;
+   font-size: 16px;
+   font-style: normal;
+}
+
+.contact-info a {
+   color: var(--primary-color);
+}
+
+/*  REACH OUT STYLES END */
+
+
+.text-left {
+   text-align: left;
+}
+
+.text-right {
+   text-align: right;
+}
+
+.flex-row {
+   display: flex;
+}
+
+
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+   header{
+       padding-bottom: 0;
+       justify-content: center;
+       position: relative;
+   }
+
+   header h1 {
+       width: 100%;
+       text-align: center;
+   }
+
+   header nav ul {
+       margin-top: 20px;
+       width: 100%;
+       justify-content: center;
+   }
+
+   header nav ul li a {
+       font-size: 20px;
+   }
+
+   footer h2, footer div {
+       text-align: center;
+       width: 100%;
+   }
+
+   .hero-cta, .hero-form {
+       width: 100%;
+   }
+
+   .hero-cta {
+       text-align: center;
+   }
+
+   .section-title {
+       width: 80%;
+   }
+
+   .trainer {
+       flex: 0 70%;
+   }
+
+   .contact-info iframe {
+       flex: 1 100%;
+   }
+ }
+ 
+ /* MEDIA QUERY FOR TABLETS AND SMALLER */
+ @media screen and (max-width: 768px) {
+   section {
+       padding: 30px 15px;
+   }
+
+   .step h3 {
+       flex: 1 100%;
+       text-align: center;
+       font-size: 22px;
+   }
+
+   .step-info {
+       flex: 2 100%;
+       text-align: center;
+       justify-content: center;
+   }
+
+   .step-img {
+       flex: 0 32%;
+       margin-right: 0;
+       martgin-top: 15px;
+       margin-bottom: 15px;
+   }
+
+   .step-text {
+       flex: 100%;
+   }
+
+   .service-grid-container {
+       grid-template-columns: 1fr 1fr;
+   }
+
+   .service-grid-item.basic {
+       grid-column: 1;
+   }
+
+   .service-grid-item.both {
+       grid-column: 1 / -1;
+   }
+
+   .service-grid-item.cancel {
+       transform: none;
+       writing-mode: unset;
+       grid-column: 1 / -1;
+       grid-row: -1;
+   }
+
+   .trainer-bio h3, .trainer-bio h4 {
+       display: block;
+   }
+
+   .trainer-img h3, .trainer-img h4, .trainer-img::after{
+       display: none;
+   }
+ }
+ 
+ /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+ @media screen and (max-width: 575px) {
+   .hero-form button {
+       width: 100%;
+   }
+
+   .section-title {
+       width: 95%;
+   }
+
+   .intro p {
+       flex: 0 100%;
+   }
+
+   .trainer {
+       flex: 0 100%;
+   }
+
+   .contact-info {
+       text-align: center;
+   }
+
+   .contact-info > * {
+       flex: 0 100%;
+   }
+
+   .contact-form {
+       order: 3;
+   }
+ }
